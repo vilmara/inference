@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y \
 
 # Make pip happy about itself.
 RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools
 
 # Unlike apt-get, upgrading pip does not change which package gets installed,
 # (since it checks pypi everytime regardless) so it's okay to cache pip.
