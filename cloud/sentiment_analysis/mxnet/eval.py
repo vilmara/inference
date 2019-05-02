@@ -28,6 +28,7 @@ parser.add_argument('--model', default='rnn', help='Model type cnn or rnn')
 parser.add_argument('--calc_accuracy', dest='calc_accuracy', action='store_true', help='Calc accuracy on the full validation dataset')
 parser.add_argument('--cuda', dest='cuda', action='store_true', help='Use cuda to train model')
 parser.add_argument('--epoch', type=int, default=0)
+parser.add_argument('--gpus', default='0') ## added because of error AttributeError: 'Namespace' object has no attribute 'gpus'
 
 def main():
     global args, best_prec1
